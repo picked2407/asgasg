@@ -24,9 +24,9 @@ const Page = () => {
                 }
 
                 .single-image {
-                    width: 320px; /* Increase width */
-                    height: 250px; /* Adjust height as needed */
-                    margin: 20px; /* Adjust spacing as needed */
+                    width: 320px; /* Set maximum width */
+                    height: 300px; /* Maintain aspect ratio */
+                    margin: 20px auto; /* Center image horizontally */
                     border-radius: 10px;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                     transition: transform 0.3s ease-in-out;
@@ -38,8 +38,9 @@ const Page = () => {
 
                 .image-row {
                     display: flex;
+                    flex-wrap: wrap; /* Allow images to wrap to next line */
                     justify-content: center; /* Horizontally center the images */
-                    gap: 40px; /* Adjust spacing between images */
+                    gap: 20px; /* Adjust spacing between images */
                     margin-top: 40px;
                 }
 
@@ -78,17 +79,6 @@ const Page = () => {
                 .toggle-button:hover {
                     background-color: #0056b3;
                 }
-
-                @media only screen and (max-width: 600px) {
-                    /* Adjust image size and layout for mobile view */
-                    .single-image {
-                        width: 100%;
-                        max-width: none;
-                    }
-                    .image-row {
-                        flex-direction: column;
-                    }
-                }
             `}</style>
             {showHeaderFooter && (
                 <header>
@@ -104,14 +94,10 @@ const Page = () => {
                         <h2>Select the company</h2>
                     </div>
                     <div className="image-row">
-                        <div>
-                            <img src="/assets/images/large_logo.png" alt="Image 1" className="single-image" />
-                            <img src="https://media.discordapp.net/attachments/1193183717548638301/1217867469759315968/Untitled_design_14.png?ex=66059677&is=65f32177&hm=292f7720a2b76e31985efb8470c59dd90e8c6a643ba159e7b115d8d360ab2626&=&format=webp&quality=lossless&width=957&height=540" alt="Image 2" className="single-image" />
-                        </div>
-                        <div className="scaled-images">
-                            <img src="https://media.discordapp.net/attachments/1193183717548638301/1215705946140053596/image-removebg-preview_9.png?ex=65fdb964&is=65eb4464&hm=082adccdaa24f5be6d3759b6795a7a72ec9372d4c81a7d0599a8a195272b29af&=&format=webp&quality=lossless&width=400&height=400" alt="Image 3" className="single-image" />
-                            <img src="https://t3.ftcdn.net/jpg/01/29/69/84/360_F_129698446_e2kKKd1MgIDJJzxfO1sE0jeUSn88SzKx.jpg" alt="Image 4" className="single-image" />
-                        </div>
+                        <img src="/assets/images/large_logo.png" alt="Image 1" className="single-image" />
+                        <img src="https://media.discordapp.net/attachments/1193183717548638301/1217887367516655696/image-removebg-preview_10.png?ex=6605a8ff&is=65f333ff&hm=4bc0e797de6da35960295d7538d81b058b1d0386a4ae8a5a29d69fdf5d34d673&=&format=webp&quality=lossless&width=613&height=613" alt="Image 2" className="single-image" />
+                        <img src="https://media.discordapp.net/attachments/1193183717548638301/1215705946140053596/image-removebg-preview_9.png?ex=65fdb964&is=65eb4464&hm=082adccdaa24f5be6d3759b6795a7a72ec9372d4c81a7d0599a8a195272b29af&=&format=webp&quality=lossless&width=400&height=400" alt="Image 3" className="single-image" />
+                        <img src="https://t3.ftcdn.net/jpg/01/29/69/84/360_F_129698446_e2kKKd1MgIDJJzxfO1sE0jeUSn88SzKx.jpg" alt="Image 4" className="single-image" />
                     </div>
                 </div>
             </div>

@@ -94,7 +94,6 @@ const Page = () => {
                         <h2>Select the company</h2>
                     </div>
                     <div className="image-row">
-                        <img src="/assets/images/l.png" alt="Image 1" className="single-image" />
                         <img src="/assets/images/log.png" alt="Image 2" className="single-image" />
                         <img src="/assets/images/2.png" alt="Image 3" className="single-image" />
                     </div>

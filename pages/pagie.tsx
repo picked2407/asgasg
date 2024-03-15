@@ -96,8 +96,7 @@ const Page = () => {
                     <div className="image-row">
                         <img src="/assets/images/l.png" alt="Image 1" className="single-image" />
                         <img src="/assets/images/log.png" alt="Image 2" className="single-image" />
-                        <img src="https://media.discordapp.net/attachments/1193183717548638301/1215705946140053596/image-removebg-preview_9.png?ex=65fdb964&is=65eb4464&hm=082adccdaa24f5be6d3759b6795a7a72ec9372d4c81a7d0599a8a195272b29af&=&format=webp&quality=lossless&width=400&height=400" alt="Image 3" className="single-image" />
-                        <img src="https://t3.ftcdn.net/jpg/01/29/69/84/360_F_129698446_e2kKKd1MgIDJJzxfO1sE0jeUSn88SzKx.jpg" alt="Image 4" className="single-image" />
+                        <img src="/assets/images/2.png" alt="Image 3" className="single-image" />
                     </div>
                 </div>
             </div>

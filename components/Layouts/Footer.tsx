@@ -10,7 +10,7 @@ const Footer = () => {
         <footer className="mt-auto bg-white dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.03] dark:to-transparent">
             <div className="container md:flex md:gap-5">
                 <div className="">
-                    <img src="/assets/images/log.png" className="mt-10 h-32 rtl:rotate-y-180" alt="" />
+                    <img src="/assets/images/2.png" className="mt-10 h-32 rtl:rotate-y-180" alt="" />
                 </div>
                 <div className="grid justify-between gap-x-4 gap-y-10 py-9 sm:grid-cols-3 lg:grid-cols-4 lg:py-[50px]">
                     <div>

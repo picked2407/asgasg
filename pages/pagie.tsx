@@ -95,7 +95,10 @@ const Page = () => {
                     </div>
                     <div className="image-row">
                         <img src="/assets/images/log.png" alt="Image 2" className="single-image" />
-                        <img src="/assets/images/2.png" alt="Image 3" className="single-image" />
+                        <a href="https://asgasg-cyan.vercel.app/">
+  <img src="/assets/images/2.png" alt="Image 3" className="single-image" />
+</a>
+
                     </div>
                 </div>
             </div>

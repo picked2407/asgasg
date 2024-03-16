@@ -33,7 +33,7 @@ const Header = (props: any) => {
             <div className="container">
                 <div className="flex items-center justify-between py-5 lg:py-0">
                     <Link href="/">
-                        <img src="/assets/images/logo.png" alt="plurk" className="h-10 w-full" />
+                        <img src="/assets/images/2.png" alt="plurk" className="h-20 w-full" />
                     </Link>
                     <div className="flex items-center">
                         <div onClick={() => toggleMenu()} className={`overlay fixed inset-0 z-[51] bg-black/60 lg:hidden ${showMenu ? '' : 'hidden'}`}></div>
@@ -53,20 +53,24 @@ const Header = (props: any) => {
                                 </button>
                             </div>
                             <ul onClick={() => toggleMenu()}>
-                                <li>
-                                    <Link href="/#home">{language.home[currentLanguage]}</Link>
-                                </li>
-                                <li>
-                                    <Link href="/#about">{language.aboutUs[currentLanguage]}</Link>
-                                </li>
-                                <li>
-                                    <Link href="/#services">{language.services[currentLanguage]}</Link>
-                                </li>
-                                <li>
-                                    <Link href="/#contact">{language.contact[currentLanguage]}</Link>
-                                </li>
-                                <li className="relative hidden items-center before:absolute before:top-1/2 before:h-[30px] before:w-[2px] before:-translate-y-1/2 before:bg-gray/30 ltr:before:-left-[2px] rtl:pr-9 rtl:before:-right-[2px] lg:inline-flex"></li>
-                            </ul>
+    <li>
+        <Link href="/#home">{language.home[currentLanguage]}</Link>
+    </li>
+    <li>
+        <Link href="/#about">{language.aboutUs[currentLanguage]}</Link>
+    </li>
+    <li>
+        <Link href="/#services">{language.services[currentLanguage]}</Link>
+    </li>
+    <li>
+        <Link href="/#contact">{language.contact[currentLanguage]}</Link>
+    </li>
+    <li>
+        <Link href="/pagie">Select</Link> {/* New list item for Services section */}
+    </li>
+    <li className="relative hidden items-center before:absolute before:top-1/2 before:h-[30px] before:w-[2px] before:-translate-y-1/2 before:bg-gray/30 ltr:before:-left-[2px] rtl:pr-9 rtl:before:-right-[2px] lg:inline-flex"></li>
+</ul>
+
                         </div>
                         <ul className="flex items-center gap-2 ltr:pr-5 rtl:pl-5 ltr:lg:pl-5 ltr:lg:pr-0 rtl:lg:pl-0 rtl:lg:pr-5">
                             <li>

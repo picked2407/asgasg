@@ -55,6 +55,8 @@ const DefaultLayout = ({ children, showHeader = true, showFooter = true }: Props
 
     return (
         <App>
+        
+            
             {/* BEGIN MAIN CONTAINER */}
             <div>
                 {/* screen loader  */}

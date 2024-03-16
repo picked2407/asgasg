@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Header from '../components/Layouts/Header';
-import Footer from '../components/Layouts/Footer';
+import Header from '../../components/Layouts/Header';
+import Footer from '../../components/Layouts/Footer';
 
 const Page = () => {
     const [count, setCount] = useState(0);

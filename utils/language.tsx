@@ -276,7 +276,7 @@ export const language: any = {
                 </p>
                 <p className="pb-2 text-lg font-medium">b. Cookies de Rendimiento</p>
                 <p className="pb-5 text-lg font-medium">
-                    Nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web, proporcionándonos información para mejorar su rendimiento. 
+                    Nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web, proporcionándonos información para mejorar su rendimiento.
                 </p>
                 <p className="pb-2 text-lg font-medium">c. Cookies de Funcionalidad</p>
                 <p className="pb-5 text-lg font-medium">

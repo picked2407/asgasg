@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
-import { IRootState } from '../store';
+import { IRootState } from '../../store';
 import Head from 'next/head';
-import { language } from '../utils/language';
+import { language } from '../../utils/language';
 
 const Privacypolicy = () => {
     const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;

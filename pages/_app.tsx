@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
                     content="Our commitment is to provide personalized solutions for all personal and business projects with vision and promising future."
                 />
                 <meta property="og:keywords" content="Loan, business, america business, funding, venture capital" />
-                <meta property="og:image" content="/assets/images/logo.png" />
+                <meta property="og:image" content="/assets/images/2.png" />
             </Head>
             <DefaultLayout>
                 <Suspense fallback={<div>Loading...</div>}>

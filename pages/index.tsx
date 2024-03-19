@@ -27,10 +27,8 @@ export default function Document() {
 
     const [showSearch, setShowSearch] = useState(false);
     const toggleLang = () => {
-        const newLanguage = themeConfig.language === 'en' ? 'es' : 'en';
-        dispatch(toggleLanguage(newLanguage));
+        dispatch(toggleLanguage(`${themeConfig.language === 'en' ? 'es' : 'en'}`));
     };
-    
     
     // Assuming the language object is defined with appropriate properties
     const languageData = {
@@ -158,9 +156,11 @@ export default function Document() {
         {
             serviceName: languageData.serviceTitle4[currentLanguage],
             serviceDesc: languageData.service4[currentLanguage], // Corrected service description key
-         
-
-
+            icon: (
+                <svg viewBox="0 0 640 512" fill="white" height="26" width="26">
+                    <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3 0 498.7 13.3 512 29.7 512h388.6c1.8 0 3.5-.2 5.3-.5-76.3-55.1-99.8-141-103.1-200.2-16.1-4.8-33.1-7.3-50.7-7.3h-91.5zm308.8-78.3l-120 48C358 277.4 352 286.2 352 296c0 63.3 25.9 168.8 134.8 214.2 5.9 2.5 12.6 2.5 18.5 0C614.1 464.8 640 359.3 640 296c0-9.8-6-18.6-15.1-22.3l-120-48c-5.7-2.3-12.1-2.3-17.8 0zM591.4 312c-3.9 50.7-27.2 116.7-95.4 149.7V273.8l95.4 38.2z" />
+                </svg>
+            ),
         },
         
         {
@@ -191,7 +191,7 @@ export default function Document() {
         {/* Header */}
         <header className="flex items-center justify-end px-4 py-2 absolute inset-x-0 top-0 z-10">
             {/* Move the image above the "Welcome to" text */}
-            <img src="/assets/images/l.png" alt="Logo" className="h-20 w-auto mr-auto mb-2" />
+            <img src="/assets/images/log.png" alt="Logo" className="h-20 w-auto mr-auto mb-2" />
             <a href="/pagie">
             <button>
                 <span className="text-black text-bold">Select</span>
@@ -236,7 +236,7 @@ export default function Document() {
         <div className="max-w-[624px] text-center ltr:md:text-left rtl:md:text-left">
             {/* Move the "Welcome to" text below the logo */}
             <h2 className="text-4xl font-extrabold sm:text-5xl md:text-7xl md:leading-[88px] text-black text-center">
-    <span className="text-black" style={{ marginRight: '140px' }}>{languageData.welcomeTo[currentLanguage]}</span> Dominicana 4k
+    <span className="text-secondary" style={{ marginRight: '140px' }}>{languageData.welcomeTo[currentLanguage]}</span> Dominicana 4k
 </h2>
 
 
@@ -257,13 +257,15 @@ export default function Document() {
                     <p className="!text-black">{languageData.paragraph[currentLanguage]}</p>
                 </div>
                 <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-2">
-                    {serviceList.map(({ serviceName, serviceDesc }, index) => (
+                    {serviceList.map(({ serviceName, serviceDesc, icon }, index) => (
                         <div key={index}>
                             <div
                                 className="group relative overflow-hidden rounded-3xl border-2 border-white bg-#1F3B4D p-6 transition duration-500 shadow-card hover:shadow-card-hover hover:border-secondary hover:bg-blue-500 dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent"
                                 style={{ boxShadow: '0px 10px 20px rgba(31, 59, 77, 0.2)' }} // Adding box shadow
                             >
-                              
+                                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-secondary transition group-hover:bg-blue-500">
+                                    {icon}
+                                </div>
                                 <Link href="#contact" className="my-8 inline-block text-[22px] font-semibold text-black dark:text-white">
                                     {/* Remove the transition effect on hover */}
                                     <span>{serviceName}</span>

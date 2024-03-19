@@ -133,7 +133,7 @@ const Consulting = () => {
                     <div className="container">
                         <div className="max-w-[624px] text-center ltr:md:text-left rtl:md:text-right">
                             <h2 className="text-4xl font-extrabold sm:text-5xl md:text-[70px] md:leading-[88px]">
-                                {language.welcomeTo[currentLanguage]} <span className="text-secondary">Dominicana 4k</span>
+                                {language.welcomeTo[currentLanguage]} <span className="text-secondary">Prestamos 4k</span>
                             </h2>
                             {/* <p className="mt-4 text-lg font-semibold">{language.tagline[currentLanguage]}</p> */}
                             <Link href="#services" className="btn mt-8 bg-white px-8 py-[19px] text-black hover:bg-secondary hover:text-white md:mt-[60px]">

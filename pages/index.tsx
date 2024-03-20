@@ -266,7 +266,7 @@ export default function Document() {
                                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-secondary transition group-hover:bg-blue-500">
                                     {icon}
                                 </div>
-                                <Link href="#contact" className="my-8 inline-block text-[22px] font-semibold text-black dark:text-white">
+                                <Link href="/" className="my-8 inline-block text-[22px] font-semibold text-black dark:text-white">
                                     {/* Remove the transition effect on hover */}
                                     <span>{serviceName}</span>
                                 </Link>

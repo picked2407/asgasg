@@ -66,7 +66,7 @@ const Header = (props: any) => {
         <Link href="/#contact">{language.contact[currentLanguage]}</Link>
     </li>
     <li>
-        <Link href="/pagie">Select</Link> {/* New list item for Services section */}
+        <Link href="/select">Select</Link> {/* New list item for Services section */}
     </li>
     <li className="relative hidden items-center before:absolute before:top-1/2 before:h-[30px] before:w-[2px] before:-translate-y-1/2 before:bg-gray/30 ltr:before:-left-[2px] rtl:pr-9 rtl:before:-right-[2px] lg:inline-flex"></li>
 </ul>

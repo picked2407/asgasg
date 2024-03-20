@@ -81,6 +81,11 @@ export const language: any = {
         en: 'Achieve financial relief with our loans designed to consolidate both bank and private debts. We offer the lowest interest rates and most flexible terms, making it the ideal solution to overcome your debts, regain tranquility, and take control of your financial situation.',
         es: 'Obtén alivio financiero con nuestros préstamos diseñados para consolidar deudas de bancos y deudas privadas. Tenemos las tasas de interés mas bajas y los términos mas flexibles, siendo la solución ideal para superar tus deudas, recuperar la tranquilidad y tomar el control de tu situación financiera.',
     },
+    service11: {
+        en: "Are you overwhelmed by multiple debts? Our specialists will help you find suitable financing solutions and unify your debts so you can regain control of your finances.",
+        es: "¿Se encuentra abrumado por múltiples deudas? Nuestros especialistas le ayudarán a encontrar soluciones de financiación adecuadas y a unificar sus deudas para que pueda recuperar el control de sus finanzas.",
+        // Define other languages here
+    },
     termsText: {
         en: (
             <div className="pb-12">

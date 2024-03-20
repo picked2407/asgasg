@@ -80,14 +80,7 @@ const Page = () => {
                     background-color: #0056b3;
                 }
             `}</style>
-            {showHeaderFooter && (
-                <header>
-                    {/* Header content */}
-                    <div className="container">
-                        <h1 style={{ textAlign: 'center' }}>Header</h1>
-                    </div>
-                </header>
-            )}
+           
             <div className="container">
                 <div className="image-container">
                     <div className="text">
@@ -104,14 +97,7 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-            {showHeaderFooter && (
-                <footer>
-                    {/* Footer content */}
-                    <div className="container">
-                        <h3>Footer</h3>
-                    </div>
-                </footer>
-            )}
+            
         </div>
     );
 }

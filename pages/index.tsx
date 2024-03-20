@@ -192,7 +192,7 @@ export default function Document() {
         <header className="flex items-center justify-end px-4 py-2 absolute inset-x-0 top-0 z-10">
             {/* Move the image above the "Welcome to" text */}
             <img src="/assets/images/log.png" alt="Logo" className="h-20 w-auto mr-auto mb-2" />
-            <a href="/pagie">
+            <a href="/select">
             <button>
                 <span className="text-black text-bold">Select</span>
             </button>
@@ -236,7 +236,7 @@ export default function Document() {
         <div className="max-w-[624px] text-center ltr:md:text-left rtl:md:text-left">
             {/* Move the "Welcome to" text below the logo */}
             <h2 className="text-4xl font-extrabold sm:text-5xl md:text-7xl md:leading-[88px] text-black text-center">
-    <span className="text-secondary" style={{ marginRight: '140px' }}>{languageData.welcomeTo[currentLanguage]}</span> Dominicana 4k
+    <span className="text-secondar" style={{ marginRight: '100px' }}>{languageData.welcomeTo[currentLanguage]}</span> Dominicana 4k
 </h2>
 
 
@@ -282,6 +282,62 @@ export default function Document() {
                 </div>
             </div>
         </section>
+        <footer className="mt-auto bg-white dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.03] dark:to-transparent">
+            <div className="container md:flex md:gap-5">
+                <div className="">
+                    <img src="/assets/images/log.png" className="mt-10 h-32 rtl:rotate-y-180" alt="" />
+                </div>
+                <div className="grid justify-between gap-x-4 gap-y-10 py-9 sm:grid-cols-3 lg:grid-cols-4 lg:py-[50px]">
+                    <div>
+                        <ul className="flex flex-col gap-3 font-light">
+                            <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.links[currentLanguage]}</li>
+                            <li>
+                                <Link href="/terms-conditions" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    {language.terms[currentLanguage]}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/privacy-policy" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    {language.privacyPolicy[currentLanguage]}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/cookie-policy" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    {language.cookiePolicy[currentLanguage]}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/disclaimer" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    {language.disclaimer[currentLanguage]}
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul className="flex flex-col gap-3 font-light">
+                            <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.headquarters[currentLanguage]}</li>
+                            <li className="md:w-40">Santo Domingo, Distrito Nacional</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul className="flex flex-col gap-3 font-light">
+                            <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.branchOffices[currentLanguage]}</li>
+                            <li>Santo Domingo</li>
+                            <li>La Romana</li>
+                            <li>Puerto Plata</li>
+                            <li>La Altagracia</li>
+                            <li>Samaná</li>
+                            <li>San Pedro de Macorís</li>
+                        </ul>
+                    </div>
+                    <div>
+                      
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
+
+    
     );
 }

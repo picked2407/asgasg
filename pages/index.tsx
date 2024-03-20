@@ -297,7 +297,7 @@ export default function Document() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/privacy-policy" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                <Link href="/pages/privacy-policy" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     {language.privacyPolicy[currentLanguage]}
                                 </Link>
                             </li>

@@ -36,7 +36,7 @@ export default function Document() {
     };
 
     // Assuming the language object is defined with appropriate properties
-    const languageData = {
+    const languageData: any = {
         welcomeTo: {
             en: 'Welcome to',
             es: 'Bienvenido a ',

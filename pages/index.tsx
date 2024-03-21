@@ -1,17 +1,14 @@
-import React, { useState } from "react";
-import Image from "next/image"; // Import Image component from next/image
-import Link from "next/link"; // Import Link component from next/link
+import Image from 'next/image'; // Import Image component from next/image
+import Link from 'next/link'; // Import Link component from next/link
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleLanguage } from '../store/themeConfigSlice';
 import { language } from '../utils/language';
-import { useSelector, useDispatch } from 'react-redux';
-import { toggleTheme, toggleDirection, toggleLanguage } from '../store/themeConfigSlice';
 
-import { useRouter } from 'next/router';
-import { IRootState } from "../store";
-
+import { IRootState } from '../store';
 
 export default function Document() {
-
-    const currentLanguage = "en" || "es"
+    const currentLanguage = useSelector((state: IRootState) => state.themeConfig.language);
 
     const themeConfig = useSelector((state: IRootState) => state.themeConfig);
     const dispatch = useDispatch();
@@ -27,104 +24,102 @@ export default function Document() {
 
     const [showSearch, setShowSearch] = useState(false);
 
-
-    
     const toggleLang = () => {
         try {
-            console.log("asgasg")
-        
-          toggleLanguage(`${themeConfig.language === 'en' ? 'es' : 'en'}`);
-          console.log("yes")
-          } catch (err: any) {
-          console.error("Error " + err.message);
+            console.log('asgasg');
+
+            dispatch(toggleLanguage(`${themeConfig.language === 'en' ? 'es' : 'en'}`));
+            console.log('yes');
+        } catch (err: any) {
+            console.error('Error ' + err.message);
         }
-            };
-    
+    };
+
     // Assuming the language object is defined with appropriate properties
     const languageData = {
         welcomeTo: {
-            en: "Welcome to",
-            es: "Bienvenido a ",
+            en: 'Welcome to',
+            es: 'Bienvenido a ',
             // Define other languages here
         },
         ourServices: {
-            en: "Our Services",
+            en: 'Our Services',
             // Define other languages here
         },
         serviceTitle1: {
-            en: "Financing and Debt Unification",
-            es: "Financiación y Unificación de Deudas"
+            en: 'Financing and Debt Unification',
+            es: 'Financiación y Unificación de Deudas',
             // Define other languages here
         },
         serviceTitle2: {
-            en: "Financial Advice and Planning",
-            es: "Asesoría y Planificación Financiera",
+            en: 'Financial Advice and Planning',
+            es: 'Asesoría y Planificación Financiera',
             // Define other languages here
         },
         serviceTitle3: {
-            en: "Business Plan Development",
-            es: "Desarrollo de Planes de Negocios"
+            en: 'Business Plan Development',
+            es: 'Desarrollo de Planes de Negocios',
 
             // Define other languages here
         },
         serviceTitle4: {
-            en: "Consulting on New Technologies",
-            es: "Asesoría en Nuevas Tecnologías"
+            en: 'Consulting on New Technologies',
+            es: 'Asesoría en Nuevas Tecnologías',
             // Define other languages here
         },
         serviceTitle5: {
-            en: "Real Estate Business Consulting",
-            es: "Asesoría en Negocios Inmobiliarios"
+            en: 'Real Estate Business Consulting',
+            es: 'Asesoría en Negocios Inmobiliarios',
             // Define other languages here
         },
         serviceTitle6: {
-            en: "Long Term Investment Planning",
-            es: "Planificación de Inversiones a Largo Plazo"
+            en: 'Long Term Investment Planning',
+            es: 'Planificación de Inversiones a Largo Plazo',
             // Define other languages here
         },
         service1: {
-            en: "Are you overwhelmed by multiple debts? Our specialists will help you find suitable financing solutions and unify your debts so you can regain control of your finances.",
-            es: "¿Se encuentra abrumado por múltiples deudas? Nuestros especialistas le ayudarán a encontrar soluciones de financiación adecuadas y a unificar sus deudas para que pueda recuperar el control de sus finanzas.",
+            en: 'Are you overwhelmed by multiple debts? Our specialists will help you find suitable financing solutions and unify your debts so you can regain control of your finances.',
+            es: '¿Se encuentra abrumado por múltiples deudas? Nuestros especialistas le ayudarán a encontrar soluciones de financiación adecuadas y a unificar sus deudas para que pueda recuperar el control de sus finanzas.',
             // Define other languages here
         },
         service2: {
-            en: "Whether you are looking to establish a solid financial plan for the future or need advice on how to manage your assets, our team of experts is here to help you every step of the way.",
-            es: "Ya sea que esté buscando establecer un plan financiero sólido para el futuro o necesite asesoramiento sobre cómo administrar sus activos, nuestro equipo de expertos está aquí para ayudarlo en cada paso del camino.",
+            en: 'Whether you are looking to establish a solid financial plan for the future or need advice on how to manage your assets, our team of experts is here to help you every step of the way.',
+            es: 'Ya sea que esté buscando establecer un plan financiero sólido para el futuro o necesite asesoramiento sobre cómo administrar sus activos, nuestro equipo de expertos está aquí para ayudarlo en cada paso del camino.',
             // Define other languages here
         },
         service3: {
-            en: "Do you have a brilliant idea but need help turning it into a successful business? Our consultants will work with you to develop a solid, strategic business plan that will guide you to business success.",
-            es: "¿Tiene una idea brillante pero necesita ayuda para convertirla en un negocio exitoso? Nuestros consultores trabajarán con usted para desarrollar un plan de negocios sólido y estratégico que lo guiará hacia el éxito empresarial.",
+            en: 'Do you have a brilliant idea but need help turning it into a successful business? Our consultants will work with you to develop a solid, strategic business plan that will guide you to business success.',
+            es: '¿Tiene una idea brillante pero necesita ayuda para convertirla en un negocio exitoso? Nuestros consultores trabajarán con usted para desarrollar un plan de negocios sólido y estratégico que lo guiará hacia el éxito empresarial.',
             // Define other languages here
         },
         service4: {
             en: "In today's digital world, it is crucial to stay up to date with the latest technologies. Whether you need help with app development, digital marketing strategies, or improving your online presence, our experts are ready to help propel your business into the future.",
-            es: "En el mundo digital de hoy, es crucial mantenerse al día con las últimas tecnologías. Ya sea que necesite ayuda con el desarrollo de aplicaciones, estrategias de marketing digital o mejorar su presencia en línea, nuestros expertos están listos para ayudarlo a impulsar su negocio hacia el futuro.",
+            es: 'En el mundo digital de hoy, es crucial mantenerse al día con las últimas tecnologías. Ya sea que necesite ayuda con el desarrollo de aplicaciones, estrategias de marketing digital o mejorar su presencia en línea, nuestros expertos están listos para ayudarlo a impulsar su negocio hacia el futuro.',
             // Define other languages here
         },
         service5: {
             en: "Are you looking to invest in the real estate market but don't know where to start? Our specialists will provide you with expert advice on all aspects of real estate business, from property acquisition and management to optimizing the performance of your property portfolio.",
-            es: "¿Está buscando invertir en el mercado inmobiliario pero no sabe por dónde empezar? Nuestros especialistas le brindarán asesoramiento experto en todos los aspectos de los negocios inmobiliarios, desde la adquisición y gestión de propiedades hasta la optimización del rendimiento de su cartera inmobiliaria.",
+            es: '¿Está buscando invertir en el mercado inmobiliario pero no sabe por dónde empezar? Nuestros especialistas le brindarán asesoramiento experto en todos los aspectos de los negocios inmobiliarios, desde la adquisición y gestión de propiedades hasta la optimización del rendimiento de su cartera inmobiliaria.',
             // Define other languages here
         },
         service6: {
             en: "The financial future is as important as the present. Our advisors will help you design a solid, personalized investment strategy that aligns with your long-term goals, whether for retirement, your children's education, or any other financial goal you have in mind.",
-            es: "El futuro financiero es tan importante como el presente. Nuestros asesores lo ayudarán a diseñar una estrategia de inversión sólida y personalizada que se alinee con sus objetivos a largo plazo, ya sea para la jubilación, la educación de sus hijos o cualquier otro objetivo financiero que tenga en mente.",
+            es: 'El futuro financiero es tan importante como el presente. Nuestros asesores lo ayudarán a diseñar una estrategia de inversión sólida y personalizada que se alinee con sus objetivos a largo plazo, ya sea para la jubilación, la educación de sus hijos o cualquier otro objetivo financiero que tenga en mente.',
             // Define other languages here
         },
         weHelpBrands: {
-            en: "We Help Brands",
+            en: 'We Help Brands',
             // Define other languages here
         },
         contact: {
-            en: "Contact",
+            en: 'Contact',
             // Define other languages here
         },
         paragraph: {
-            en: "At Dominicana 4K we are dedicated to connecting clients with expert providers in a wide range of services, including:",
-            es: "En Dominicana 4K nos dedicamos a conectar a clientes con proveedores expertos en una amplia gama de servicios, incluyendo:"
+            en: 'At Dominicana 4K we are dedicated to connecting clients with expert providers in a wide range of services, including:',
+            es: 'En Dominicana 4K nos dedicamos a conectar a clientes con proveedores expertos en una amplia gama de servicios, incluyendo:',
             // Define other languages here
-        }
+        },
     };
 
     const serviceList = [
@@ -172,7 +167,7 @@ export default function Document() {
                 </svg>
             ),
         },
-        
+
         {
             serviceName: languageData.serviceTitle5[currentLanguage],
             serviceDesc: languageData.service5[currentLanguage],
@@ -194,42 +189,33 @@ export default function Document() {
         // Define other services here
     ];
 
-    
-    
     return (
         <div>
-        {/* Header */}
-        <header className="flex items-center justify-end px-4 py-2 absolute inset-x-0 top-0 z-10">
-            {/* Move the image above the "Welcome to" text */}
-            <img src="/assets/images/log.png" alt="Logo" className="h-20 w-auto mr-auto mb-2" />
-            <a href="/select">
-            <button>
-                <span className="text-black text-bold">Select</span>
-            </button>
-            </a>
-            <ul className="flex items-center gap-2 ltr:pr-5 rtl:pl-5 ltr:lg:pl-5 ltr:lg:pr-0 rtl:lg:pl-0 rtl:lg:pr-5">
+            {/* Header */}
+            <header className="absolute inset-x-0 top-0 z-10 flex items-center justify-end px-4 py-2">
+                {/* Move the image above the "Welcome to" text */}
+                <img src="/assets/images/log.png" alt="Logo" className="mb-2 mr-auto h-20 w-auto" />
+                <a href="/select">
+                    <button>
+                        <span className="text-bold text-black">Select</span>
+                    </button>
+                </a>
+                <ul className="flex items-center gap-2 ltr:pr-5 rtl:pl-5 ltr:lg:pl-5 ltr:lg:pr-0 rtl:lg:pl-0 rtl:lg:pr-5">
+                    <li>
+                        <button type="button" onClick={() => toggleLang()} className="pl-4 pr-2 font-medium text-black hover:text-primary">
+                            {themeConfig.language === 'en' && <span className="text-xl">ES</span>}
+                            {themeConfig.language === 'es' && <span className="text-xl">EN</span>}
+                        </button>
+                    </li>
+                    <li></li>
+                </ul>
+            </header>
 
-            <li>
-    <button type="button" onClick={() => toggleLang()} className="pl-4 pr-2 font-medium text-black hover:text-primary">
-        {themeConfig.language === 'en' && <span className="text-xl">ES</span>}
-        {themeConfig.language === 'es' && <span className="text-xl">EN</span>}
-    </button>
-</li>
-<li>
-                               
-                            </li>
-                        </ul>
-
-
-
-            
-        </header>
-    
-        {/* Hero */}
-        <section className="hotel-resort-banner relative">
-            <div className="h-[650px] lg:h-[828px]">
-                {/* Background image or other content */}
-                <Image
+            {/* Hero */}
+            <section className="hotel-resort-banner relative">
+                <div className="h-[650px] lg:h-[828px]">
+                    {/* Background image or other content */}
+                    <Image
                         height={1080}
                         width={1920}
                         src="/assets/images/dominicana/hote.png"
@@ -237,117 +223,111 @@ export default function Document() {
                         alt=""
                         // style={{ objectPosition: '-7px' }}
                     />
-            </div>
-            <div className="absolute inset-0 z-[1] opacity-80">
-                {/* Overlay or other content */}
-            </div>
-            <div className="absolute inset-x-0 top-1/2 z-[1] -translate-y-1/2 pt-40 text-white sm:top-1/2 lg:pt-0">
-    <div className="container">
-        <div className="max-w-[624px] text-center ltr:md:text-left rtl:md:text-left">
-            {/* Move the "Welcome to" text below the logo */}
-            <h2 className="text-4xl font-extrabold sm:text-5xl md:text-7xl md:leading-[88px] text-black text-center">
-    <span className="text-secondar" style={{ marginRight: '100px' }}>{languageData.welcomeTo[currentLanguage]}</span> Dominicana 4k
-</h2>
-
-
-            {/* Uncomment when language.tagline is defined */}
-            {/* <p className="mt-4 text-lg font-semibold">{language.tagline[currentLanguage]}</p> */}
-           
-        </div>
-    </div>
-</div>
-
-        </section>
-    
-        <section id="service" className="scroll-mt-24 bg-white bg-cover bg-center bg-no-repeat py-14 dark:bg-none lg:py-[100px]">
-            <div className="container">
-                <div className="heading text-center">
-                    {/* Assuming languageData and serviceList are defined */}
-                    <h4 className="!text-black">{languageData.weHelpBrands[currentLanguage]}</h4>
-                    <p className="!text-black">{languageData.paragraph[currentLanguage]}</p>
                 </div>
-                <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-2">
-                    {serviceList.map(({ serviceName, serviceDesc, icon }, index) => (
-                        <div key={index}>
-                            <div
-                                className="group relative overflow-hidden rounded-3xl border-2 border-white bg-#1F3B4D p-6 transition duration-500 shadow-card hover:shadow-card-hover hover:border-secondary hover:bg-blue-500 dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent"
-                                style={{ boxShadow: '0px 10px 20px rgba(31, 59, 77, 0.2)' }} // Adding box shadow
-                            >
-                                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-secondary transition group-hover:bg-blue-500">
-                                    {icon}
-                                </div>
-                                <Link href="/" className="my-8 inline-block text-[22px] font-semibold text-black dark:text-white">
-                                    {/* Remove the transition effect on hover */}
-                                    <span>{serviceName}</span>
-                                </Link>
-                                <p className="mb-10 text-lg font-light transition group-hover:text-black dark:group-hover:text-black">{serviceDesc} </p>
-                                   
-                                        <path
-                                            d="M9.41083 14.4109L10.5892 15.5892L16.1783 10.0001L10.5892 4.41089L9.41083 5.58922L12.9883 9.16672H5V10.8334H12.9883L9.41083 14.4109Z"
-                                            fill="currentColor"
-                                        />
-                            </div>
+                <div className="absolute inset-0 z-[1] opacity-80">{/* Overlay or other content */}</div>
+                <div className="absolute inset-x-0 top-1/2 z-[1] -translate-y-1/2 pt-40 text-white sm:top-1/2 lg:pt-0">
+                    <div className="container">
+                        <div className="max-w-[624px] text-center ltr:md:text-left rtl:md:text-left">
+                            {/* Move the "Welcome to" text below the logo */}
+                            <h2 className="text-center text-4xl font-extrabold text-black sm:text-5xl md:text-7xl md:leading-[88px]">
+                                <span className="text-secondar" style={{ marginRight: '100px' }}>
+                                    {languageData.welcomeTo[currentLanguage]}
+                                </span>{' '}
+                                Dominicana 4k
+                            </h2>
+
+                            {/* Uncomment when language.tagline is defined */}
+                            {/* <p className="mt-4 text-lg font-semibold">{language.tagline[currentLanguage]}</p> */}
                         </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-        <footer className="mt-auto bg-white dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.03] dark:to-transparent">
-            <div className="container md:flex md:gap-5">
-                <div className="">
-                    <img src="/assets/images/log.png" className="mt-10 h-32 rtl:rotate-y-180" alt="" />
-                </div>
-                <div className="grid justify-between gap-x-4 gap-y-10 py-9 sm:grid-cols-3 lg:grid-cols-4 lg:py-[50px]">
-                    <div>
-                        <ul className="flex flex-col gap-3 font-light">
-                            <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.links[currentLanguage]}</li>
-                            <li>
-                                <Link href="/terms-conditions" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    {language.terms[currentLanguage]}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/pages/privacy-policy" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    {language.privacyPolicy[currentLanguage]}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/cookie-policy" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    {language.cookiePolicy[currentLanguage]}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/disclaimer" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    {language.disclaimer[currentLanguage]}
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul className="flex flex-col gap-3 font-light">
-                            <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.headquarters[currentLanguage]}</li>
-                            <li className="md:w-40">Santo Domingo, Distrito Nacional</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul className="flex flex-col gap-3 font-light">
-                            <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.branchOffices[currentLanguage]}</li>
-                            <li>Santo Domingo</li>
-                            <li>La Romana</li>
-                            <li>Puerto Plata</li>
-                            <li>La Altagracia</li>
-                            <li>Samaná</li>
-                            <li>San Pedro de Macorís</li>
-                        </ul>
-                    </div>
-                    <div>
-                      
                     </div>
                 </div>
-            </div>
-        </footer>
-    </div>
+            </section>
 
-    
+            <section id="service" className="scroll-mt-24 bg-white bg-cover bg-center bg-no-repeat py-14 dark:bg-none lg:py-[100px]">
+                <div className="container">
+                    <div className="heading text-center">
+                        {/* Assuming languageData and serviceList are defined */}
+                        <h4 className="!text-black">{languageData.weHelpBrands[currentLanguage]}</h4>
+                        <p className="!text-black">{languageData.paragraph[currentLanguage]}</p>
+                    </div>
+                    <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-2">
+                        {serviceList.map(({ serviceName, serviceDesc, icon }, index) => (
+                            <div key={index}>
+                                <div
+                                    className="bg-#1F3B4D shadow-card hover:shadow-card-hover hover:bg-blue-500 group relative overflow-hidden rounded-3xl border-2 border-white p-6 transition duration-500 hover:border-secondary dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent"
+                                    style={{ boxShadow: '0px 10px 20px rgba(31, 59, 77, 0.2)' }} // Adding box shadow
+                                >
+                                    <div className="group-hover:bg-blue-500 flex h-14 w-14 items-center justify-center rounded-full bg-secondary transition">
+                                        {icon}
+                                    </div>
+                                    <Link href="/" className="my-8 inline-block text-[22px] font-semibold text-black dark:text-white">
+                                        {/* Remove the transition effect on hover */}
+                                        <span>{serviceName}</span>
+                                    </Link>
+                                    <p className="mb-10 text-lg font-light transition group-hover:text-black dark:group-hover:text-black">{serviceDesc} </p>
+
+                                    <path
+                                        d="M9.41083 14.4109L10.5892 15.5892L16.1783 10.0001L10.5892 4.41089L9.41083 5.58922L12.9883 9.16672H5V10.8334H12.9883L9.41083 14.4109Z"
+                                        fill="currentColor"
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+            <footer className="mt-auto bg-white dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.03] dark:to-transparent">
+                <div className="container md:flex md:gap-5">
+                    <div className="">
+                        <img src="/assets/images/log.png" className="mt-10 h-32 rtl:rotate-y-180" alt="" />
+                    </div>
+                    <div className="grid justify-between gap-x-4 gap-y-10 py-9 sm:grid-cols-3 lg:grid-cols-4 lg:py-[50px]">
+                        <div>
+                            <ul className="flex flex-col gap-3 font-light">
+                                <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.links[currentLanguage]}</li>
+                                <li>
+                                    <Link href="/terms-conditions" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                        {language.terms[currentLanguage]}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/pages/privacy-policy" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                        {language.privacyPolicy[currentLanguage]}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/cookie-policy" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                        {language.cookiePolicy[currentLanguage]}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/disclaimer" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                        {language.disclaimer[currentLanguage]}
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul className="flex flex-col gap-3 font-light">
+                                <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.headquarters[currentLanguage]}</li>
+                                <li className="md:w-40">Santo Domingo, Distrito Nacional</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul className="flex flex-col gap-3 font-light">
+                                <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.branchOffices[currentLanguage]}</li>
+                                <li>Santo Domingo</li>
+                                <li>La Romana</li>
+                                <li>Puerto Plata</li>
+                                <li>La Altagracia</li>
+                                <li>Samaná</li>
+                                <li>San Pedro de Macorís</li>
+                            </ul>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
     );
 }

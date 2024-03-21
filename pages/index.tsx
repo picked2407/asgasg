@@ -26,9 +26,19 @@ export default function Document() {
     };
 
     const [showSearch, setShowSearch] = useState(false);
+
+
+    
     const toggleLang = () => {
-        dispatch(toggleLanguage(`${themeConfig.language === 'en' ? 'es' : 'en'}`));
-    };
+        try {
+            console.log("asgasg")
+        
+          toggleLanguage(`${themeConfig.language === 'en' ? 'es' : 'en'}`);
+          console.log("yes")
+          } catch (err: any) {
+          console.error("Error " + err.message);
+        }
+            };
     
     // Assuming the language object is defined with appropriate properties
     const languageData = {

@@ -30,6 +30,7 @@ const themeConfigSlice = createSlice({
             Aos.refresh();
         },
         toggleLanguage(state, { payload }) {
+            console.log("asagaasgsg")
             payload = payload || state.language; // en, es
             localStorage.setItem('language', payload);
             state.language = payload;

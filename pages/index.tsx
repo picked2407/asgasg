@@ -203,8 +203,8 @@ export default function Document() {
                 <ul className="flex items-center gap-2 ltr:pr-5 rtl:pl-5 ltr:lg:pl-5 ltr:lg:pr-0 rtl:lg:pl-0 rtl:lg:pr-5">
                     <li>
                         <button type="button" onClick={() => toggleLang()} className="pl-4 pr-2 font-medium text-black hover:text-primary">
-                            {themeConfig.language === 'en' && <span className="text-xl">ES</span>}
-                            {themeConfig.language === 'es' && <span className="text-xl">EN</span>}
+                            {themeConfig.language === 'en' && <span className="text-xl">EN</span>}
+                            {themeConfig.language === 'es' && <span className="text-xl">ES</span>}
                         </button>
                     </li>
                     <li></li>

@@ -286,22 +286,22 @@ export default function Document() {
                             <ul className="flex flex-col gap-3 font-light">
                                 <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.links[currentLanguage]}</li>
                                 <li>
-                                    <Link href="/terms-conditions" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    <Link href="/terms" className="inline-block transition hover:scale-110 hover:text-secondary">
                                         {language.terms[currentLanguage]}
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/pages/privacy-policy" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    <Link href="/privacy" className="inline-block transition hover:scale-110 hover:text-secondary">
                                         {language.privacyPolicy[currentLanguage]}
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/cookie-policy" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    <Link href="/cookies" className="inline-block transition hover:scale-110 hover:text-secondary">
                                         {language.cookiePolicy[currentLanguage]}
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/disclaimer" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    <Link href="/disclaime" className="inline-block transition hover:scale-110 hover:text-secondary">
                                         {language.disclaimer[currentLanguage]}
                                     </Link>
                                 </li>

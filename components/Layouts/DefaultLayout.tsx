@@ -120,12 +120,12 @@ const DefaultLayout = ({ children, showHeader = true, showFooter = true }: Props
 
                 <div className="flex min-h-screen flex-col bg-white bg-gradient-to-r from-[#FCF1F4] to-[#EDFBF9] font-montserrat text-base font-normal text-gray antialiased dark:bg-[#101926] dark:from-transparent dark:to-transparent">
                     {/* {(path !== '/pagie' && path !== '/page') ? <Header /> : <></>} */}
-                    {(path !== '/select' && path !== '/') ? <Header /> : <></>}
+                    {(path !== '/select' && path !== '/' && path !== '/privacy' && path !== '/cookies' && path !== '/disclaime' && path !== '/terms') ? <Header /> : <></>}
 
 
                     <div className="-mt-[82px] flex-grow overflow-x-hidden lg:-mt-[106px]">{children}</div>
 
-                    {(path !== '/select' && path !== '/') ? <Footer /> : <></>}
+                    {(path !== '/select' && path !== '/' && path !== '/privacy' && path !== '/cookies' && path !== '/disclaime' && path !== '/terms') ? <Footer /> : <></>}
 
                 </div>
 

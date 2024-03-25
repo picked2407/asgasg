@@ -119,7 +119,7 @@ const Consulting = () => {
                     <Image
                         height={1080}
                         width={1920}
-                        src="/assets/images/dominicana/hotel-banner.jpg"
+                        src="/assets/images/dominicana/hotell.png"
                         className="object-fit h-full w-full scale-x-[2.2] object-[-7px] sm:scale-x-[1.5] sm:object-[0] lg:scale-x-100"
                         alt=""
                         // style={{ objectPosition: '-7px' }}

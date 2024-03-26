@@ -276,34 +276,25 @@ const Consulting = () => {
                     <div className="relative z-10 items-start lg:flex">
                         <div className="text-left lg:mb-0 lg:w-1/3 ltr:lg:pr-10 ltr:lg:text-left rtl:lg:pl-10 rtl:lg:text-right">
                             <div
-                                className="mb-5 rounded-[32px] border border-secondary bg-white px-4 py-6 dark:bg-[#101626] md:p-7"
+                                className="mb-5 rounded-[32px] border border-green bg-white px-4 py-6 dark:bg-[#101626] md:p-7"
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
                             >
-                                <div className="mb-4 flex items-center gap-2 text-secondary">
+                                <div className="mb-4 flex items-center gap-2 text-green">
                                     <div>
-                                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clipPath="url(#clip0_563_8262)">
-                                                <path
-                                                    d="M3.24996 3.25H22.75C23.0373 3.25 23.3128 3.36414 23.516 3.5673C23.7192 3.77047 23.8333 4.04602 23.8333 4.33333V21.6667C23.8333 21.954 23.7192 22.2295 23.516 22.4327C23.3128 22.6359 23.0373 22.75 22.75 22.75H3.24996C2.96264 22.75 2.68709 22.6359 2.48393 22.4327C2.28076 22.2295 2.16663 21.954 2.16663 21.6667V4.33333C2.16663 4.04602 2.28076 3.77047 2.48393 3.5673C2.68709 3.36414 2.96264 3.25 3.24996 3.25ZM13.065 12.6566L6.11863 6.75783L4.71571 8.40883L13.079 15.5101L21.2918 8.40342L19.8748 6.76433L13.066 12.6566H13.065Z"
-                                                    fill="currentColor"
-                                                />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_563_8262">
-                                                    <rect width="26" height="26" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg>
+                                    
                                     </div>
-                                    <span className="text-[22px] font-medium">{language.mailUs[currentLanguage]}</span>
+                                    <span className="text-[22px] font-medium">Whatsapp</span>
                                 </div>
                                 <div className="pl-2">
                                     <a
                                         href="mailto:contact@dominicana4k.com"
                                         className="font-light text-black transition hover:text-secondary dark:text-white dark:hover:text-primary lg:text-lg"
                                     >
-                                        contact@dominicana4k.com
+                                        +1 (786) 744 7747
                                     </a>{' '}
                                 </div>
                             </div>
@@ -314,48 +305,17 @@ const Consulting = () => {
                             >
                                 <div className="mb-4 flex items-center gap-2 text-primary">
                                     <div>
-                                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clipPath="url(#clip0_563_8282)">
-                                                <path
-                                                    d="M19.8943 18.8122L13 25.7066L6.10567 18.8122C4.74212 17.4486 3.81354 15.7114 3.43734 13.8201C3.06114 11.9287 3.25423 9.96835 3.99219 8.18678C4.73015 6.4052 5.97983 4.88247 7.58321 3.81113C9.18658 2.73979 11.0716 2.16797 13 2.16797C14.9284 2.16797 16.8134 2.73979 18.4168 3.81113C20.0202 4.88247 21.2699 6.4052 22.0078 8.18678C22.7458 9.96835 22.9389 11.9287 22.5627 13.8201C22.1865 15.7114 21.2579 17.4486 19.8943 18.8122ZM13 14.0845C13.5746 14.0845 14.1257 13.8563 14.5321 13.4499C14.9384 13.0436 15.1667 12.4925 15.1667 11.9179C15.1667 11.3432 14.9384 10.7921 14.5321 10.3858C14.1257 9.97949 13.5746 9.75122 13 9.75122C12.4254 9.75122 11.8743 9.97949 11.4679 10.3858C11.0616 10.7921 10.8333 11.3432 10.8333 11.9179C10.8333 12.4925 11.0616 13.0436 11.4679 13.4499C11.8743 13.8563 12.4254 14.0845 13 14.0845Z"
-                                                    fill="currentColor"
-                                                />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_563_8282">
-                                                    <rect width="26" height="26" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 48 48">
+<path fill="#29b6f6" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"></path><path fill="#fff" d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z"></path><path fill="#b0bec5" d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z"></path><path fill="#cfd8dc" d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z"></path>
+</svg>
                                     </div>
-                                    <span className="text-[22px] font-medium">{language.headquarters[currentLanguage]}</span>
+                                    <span className="text-[22px] font-medium">Telegram</span>
                                 </div>
                                 <div className="pl-2">
-                                    <h5 className="font-light text-black dark:text-white lg:text-lg">Santo Domingo, Distrito Nacional</h5>
+                                    <h5 className="font-light text-black dark:text-white lg:text-lg">@prestamos4k</h5>
                                 </div>
                             </div>
-                            <div
-                                className="mb-5 rounded-[32px] border border-secondary bg-white px-4 py-6 dark:bg-[#101626] md:p-7"
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                            >
-                                <div className="mb-4 flex items-center gap-2 text-secondary">
-                                    <div>
-                                        <svg viewBox="0 0 24 24" fill="currentColor" height="32" width="32">
-                                            <path d="M15.19 21C14.12 19.43 13 17.36 13 15.5c0-1.83.96-3.5 2.4-4.5H15V9h2v1.23c.5-.14 1-.23 1.5-.23.17 0 .34 0 .5.03V3H5v18h6v-3.5h2V21h2.19M15 5h2v2h-2V5M9 19H7v-2h2v2m0-4H7v-2h2v2m0-4H7V9h2v2m0-4H7V5h2v2m2-2h2v2h-2V5m0 4h2v2h-2V9m0 6v-2h2v2h-2m7.5-3c-1.9 0-3.5 1.61-3.5 3.5 0 2.61 3.5 6.5 3.5 6.5s3.5-3.89 3.5-6.5c0-1.89-1.6-3.5-3.5-3.5m0 4.81c-.7 0-1.2-.6-1.2-1.2 0-.7.6-1.2 1.2-1.2s1.2.59 1.2 1.2c.1.6-.5 1.2-1.2 1.2z" />
-                                        </svg>
-                                    </div>
-                                    <span className="text-[22px] font-medium">{language.branchOffices[currentLanguage]}</span>
-                                </div>
-                                <div className="pl-2">
-                                    <h5 className="font-light text-black dark:text-white lg:text-lg">Santo Domingo</h5>
-                                    <h5 className="font-light text-black dark:text-white lg:text-lg">La Romana</h5>
-                                    <h5 className="font-light text-black dark:text-white lg:text-lg">Puerto Plata</h5>
-                                    <h5 className="font-light text-black dark:text-white lg:text-lg">La Altagracia</h5>
-                                    <h5 className="font-light text-black dark:text-white lg:text-lg">Samaná</h5>
-                                    <h5 className="font-light text-black dark:text-white lg:text-lg">San Pedro de Macorís</h5>
-                                </div>
-                            </div>
+                          
                         </div>
                         <form
                             ref={form}

@@ -29,6 +29,8 @@ export const language: any = {
     cookiePolicy: { en: 'Cookie Policy', es: 'Política de Cookies' },
     disclaimer: { en: 'Disclaimer', es: 'Descargo de Responsabilidad' },
     information: { en: 'Information', es: 'Información' },
+    footer: { en: 'Contact Us', es: 'Contacta con nosotras' },
+
     emailSendSuccessful: {
         en: 'E-Mail sent successfully.',
         es: 'Correo electrónico enviado exitosamente.',

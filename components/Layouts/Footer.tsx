@@ -38,26 +38,11 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
+                  
+                    
                     <div>
                         <ul className="flex flex-col gap-3 font-light">
-                            <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.headquarters[currentLanguage]}</li>
-                            <li className="md:w-40">Santo Domingo, Distrito Nacional</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul className="flex flex-col gap-3 font-light">
-                            <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.branchOffices[currentLanguage]}</li>
-                            <li>Santo Domingo</li>
-                            <li>La Romana</li>
-                            <li>Puerto Plata</li>
-                            <li>La Altagracia</li>
-                            <li>Samaná</li>
-                            <li>San Pedro de Macorís</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul className="flex flex-col gap-3 font-light">
-                            <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.contact[currentLanguage]}</li>
+                            <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.footer[currentLanguage]}</li>
                             <li>
                                 <a
                                     href="https://t.me/prestamos4k"

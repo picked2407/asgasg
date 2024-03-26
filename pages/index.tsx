@@ -230,7 +230,7 @@ export default function Document() {
                         <div className="max-w-[624px] text-center ltr:md:text-left rtl:md:text-left">
                             {/* Move the "Welcome to" text below the logo */}
                             <h2 className="text-center text-4xl font-extrabold text-black sm:text-5xl md:text-7xl md:leading-[88px]">
-                                <span className="text-secondar" style={{ marginRight: '100px' }}>
+                                <span className="text-blue" style={{ marginRight: '100px' }}>
                                     {languageData.welcomeTo[currentLanguage]}
                                 </span>{' '}
                                 Dominicana 4k
@@ -254,10 +254,10 @@ export default function Document() {
                         {serviceList.map(({ serviceName, serviceDesc, icon }, index) => (
                             <div key={index}>
                                 <div
-                                    className="bg-#1F3B4D shadow-card hover:shadow-card-hover hover:bg-blue-500 group relative overflow-hidden rounded-3xl border-2 border-white p-6 transition duration-500 hover:border-secondary dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent"
+                                    className="bg-#1F3B4D shadow-card hover:shadow-card-hover hover:bg-blue-500 group relative overflow-hidden rounded-3xl border-2 border-white p-6 transition duration-500 hover:border-blue dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent"
                                     style={{ boxShadow: '0px 10px 20px rgba(31, 59, 77, 0.2)' }} // Adding box shadow
                                 >
-                                    <div className="group-hover:bg-blue-500 flex h-14 w-14 items-center justify-center rounded-full bg-secondary transition">
+                                    <div className="group-hover:bg-blue-500 flex h-14 w-14 items-center justify-center rounded-full bg-blue transition">
                                         {icon}
                                     </div>
                                     <Link href="/" className="my-8 inline-block text-[22px] font-semibold text-black dark:text-white">
@@ -286,22 +286,22 @@ export default function Document() {
                             <ul className="flex flex-col gap-3 font-light">
                                 <li className="mb-3 text-lg font-semibold text-black dark:text-white">{language.links[currentLanguage]}</li>
                                 <li>
-                                    <Link href="/terms" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    <Link href="/terms" className="inline-block transition hover:scale-110 hover:text-blue">
                                         {language.terms[currentLanguage]}
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/privacy" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    <Link href="/privacy" className="inline-block transition hover:scale-110 hover:text-blue">
                                         {language.privacyPolicy[currentLanguage]}
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/cookies" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    <Link href="/cookies" className="inline-block transition hover:scale-110 hover:text-blue">
                                         {language.cookiePolicy[currentLanguage]}
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/disclaime" className="inline-block transition hover:scale-110 hover:text-secondary">
+                                    <Link href="/disclaime" className="inline-block transition hover:scale-110 hover:text-blue">
                                         {language.disclaimer[currentLanguage]}
                                     </Link>
                                 </li>

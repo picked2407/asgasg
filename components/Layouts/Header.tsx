@@ -54,16 +54,16 @@ const Header = (props: any) => {
                             </div>
                             <ul onClick={() => toggleMenu()}>
     <li>
-        <Link href="/#home">{language.home[currentLanguage]}</Link>
+        <Link href="#home">{language.home[currentLanguage]}</Link>
     </li>
     <li>
-        <Link href="/#about">{language.aboutUs[currentLanguage]}</Link>
+        <Link href="#about">{language.aboutUs[currentLanguage]}</Link>
     </li>
     <li>
-        <Link href="/#services">{language.services[currentLanguage]}</Link>
+        <Link href="#services">{language.services[currentLanguage]}</Link>
     </li>
     <li>
-        <Link href="/#contact">{language.contact[currentLanguage]}</Link>
+        <Link href="#contact">{language.contact[currentLanguage]}</Link>
     </li>
     <li>
         <Link href="/select">Select</Link> {/* New list item for Services section */}

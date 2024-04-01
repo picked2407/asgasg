@@ -32,7 +32,7 @@ const Header = (props: any) => {
         <header className={`sticky top-0 z-50 bg-black/10 duration-300 ${props.className}`}>
             <div className="container">
                 <div className="flex items-center justify-between py-5 lg:py-0">
-                    <Link href="/">
+                    <Link href="/prestamos4k">
                         <img src="/assets/images/2.png" alt="plurk" className="h-20 w-full" />
                     </Link>
                     <div className="flex items-center">

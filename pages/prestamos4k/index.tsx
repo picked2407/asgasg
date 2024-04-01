@@ -288,13 +288,14 @@ const Consulting = () => {
                                     <span className="text-[22px] font-medium">Whatsapp</span>
                                 </div>
                                 <div className="pl-2">
-                                    <a
-                                        href="mailto:contact@dominicana4k.com"
-                                        className="font-light text-black transition hover:text-secondary dark:text-white dark:hover:text-primary lg:text-lg"
-                                    >
-                                        +1 (786) 744 7747
-                                    </a>{' '}
-                                </div>
+    <a
+        href="https://wa.me/17867447747"
+        className="font-light text-black transition hover:text-secondary dark:text-white dark:hover:text-primary lg:text-lg"
+    >
+        +1 (786) 744 7747
+    </a>
+</div>
+
                             </div>
                             <div
                                 className="mb-5 rounded-[32px] border border-primary bg-white px-4 py-6 dark:bg-[#101626] md:p-7"
@@ -310,8 +311,14 @@ const Consulting = () => {
                                     <span className="text-[22px] font-medium">Telegram</span>
                                 </div>
                                 <div className="pl-2">
-                                    <h5 className="font-light text-black dark:text-white lg:text-lg">@prestamos4k</h5>
-                                </div>
+    <a
+        href="https://t.me/Prestamos4K"
+        className="font-light text-black dark:text-white lg:text-lg"
+    >
+        @prestamos4k
+    </a>
+</div>
+
                             </div>
                           
                         </div>

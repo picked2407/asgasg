@@ -58,7 +58,7 @@ const Privacypolicy = () => {
                                 </li>
                                 <li>
                                     <Link href="/select" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    Seleccionar
+                                    Cambiar marca 🔁
                                     </Link>
                                 </li>
                             </ul>
